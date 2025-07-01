@@ -1,73 +1,65 @@
-# Welcome to your Lovable project
+# 🔺 Squid Game Season 3: Fan Interaction Website
 
-## Project info
+**An immersive, cinematic fan experience** based on the global phenomenon **Squid Game Season 3**. Enter the world as a player, get your player ID, choose your game, and feel the thrill of survival — all through a suspense-filled interactive website.
 
-**URL**: https://lovable.dev/projects/26fcfea8-8700-4f09-b16f-d495edd737a7
+---
 
-## How can I edit this code?
+## 🕹️ Live Demo
+**[Check out the live experience →](#)**  
+*https://squidgameentry.lovable.app/*
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🧠 About the Project
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/26fcfea8-8700-4f09-b16f-d495edd737a7) and start prompting.
+This project is a fan-made interactive web experience designed to simulate the recruitment and gameplay environment of *Squid Game Season 3*. It creates a thrilling, cinematic experience where users:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Get a personalized **Player ID**
+- Choose from **three iconic games**
+- Interact with **masked guards, suspenseful transitions, and sound effects**
+- Discover hidden **Easter eggs** and secrets
+- Download a **custom player card**
 
-**Use your preferred IDE**
+The goal is to build a sense of immersion, mystery, and nostalgia for Squid Game lovers worldwide.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Features
 
-Follow these steps:
+- 🔁 **Cinematic Preloader** with rotating Squid Game symbols
+- 🪪 **Player ID Generator** with randomized numbers & symbols
+- 🎮 **Game Selection Interface** (Red Light Green Light, Marbles, Glass Bridge)
+- 🌀 **Interactive Transitions** & 3D background effects
+- 🔊 **Suspenseful SFX** (heartbeat, whispers, alarms)
+- 🎴 **Downloadable Player Card**
+- 🕵️ **Hidden Easter Eggs** (Front Man Mode, Secret Games)
+- 📱 Fully Responsive (Mobile + Desktop)
+- 🎨 Custom Cursor, Fonts & Neon Color Palette
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📦 Tech Stack (Planned/Recommended)
 
-# Step 3: Install the necessary dependencies.
-npm i
+> You can customize this based on what you're building with.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **Frontend:** HTML, TailwindCSS / SCSS, JavaScript / React / Next.js
+- **Animations:** GSAP / Lottie / Three.js
+- **Sound Effects:** Howler.js or native HTML5 Audio
+- **Deployment:** GitHub Pages / Vercel / Netlify
+
+---
+
+## 🛠️ Local Development
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/squid-game-fan-website.git
+
+# Navigate into the project folder
+cd squid-game-fan-website
+
+# Install dependencies (if using Node.js)
+npm install
+
+# Run the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/26fcfea8-8700-4f09-b16f-d495edd737a7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
