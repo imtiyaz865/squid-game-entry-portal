@@ -1,12 +1,65 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState } from 'react';
+import Preloader from '@/components/Preloader';
+import EntryInterface from '@/components/EntryInterface';
+import GameSelection from '@/components/GameSelection';
+import PlayerCard from '@/components/PlayerCard';
+
+type GameState = 'loading' | 'entry' | 'game-selection' | 'player-card';
 
 const Index = () => {
+  const [gameState, setGameState] = useState<GameState>('loading');
+  const [playerData, setPlayerData] = useState({
+    name: '',
+    playerId: '',
+    selectedGame: ''
+  });
+
+  const handlePreloaderComplete = () => {
+    setGameState('entry');
+  };
+
+  const handlePlayerRegistered = (name: string, playerId: string) => {
+    setPlayerData(prev => ({ ...prev, name, playerId }));
+    setGameState('game-selection');
+  };
+
+  const handleGameSelected = (game: string) => {
+    setPlayerData(prev => ({ ...prev, selectedGame: game }));
+    setGameState('player-card');
+  };
+
+  const handleRestart = () => {
+    setGameState('loading');
+    setPlayerData({ name: '', playerId: '', selectedGame: '' });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-squid-dark">
+      {gameState === 'loading' && (
+        <Preloader onComplete={handlePreloaderComplete} />
+      )}
+      
+      {gameState === 'entry' && (
+        <EntryInterface onPlayerRegistered={handlePlayerRegistered} />
+      )}
+      
+      {gameState === 'game-selection' && (
+        <GameSelection
+          playerName={playerData.name}
+          playerId={playerData.playerId}
+          onGameSelected={handleGameSelected}
+        />
+      )}
+      
+      {gameState === 'player-card' && (
+        <PlayerCard
+          playerName={playerData.name}
+          playerId={playerData.playerId}
+          selectedGame={playerData.selectedGame}
+          onRestart={handleRestart}
+        />
+      )}
     </div>
   );
 };
